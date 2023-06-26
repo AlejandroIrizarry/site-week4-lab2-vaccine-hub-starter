@@ -4,6 +4,7 @@
   "description": "For this lab, you'll build the backend for a vaccine registration platform. The goal is to allow users to register for a vaccine with their credentials and login to check their appointment info.",
   "main": "server.js",
   "scripts": {
+    "start": "nodemon server.js",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "author": "",
@@ -16,5 +17,6 @@
     "morgan": "^1.10.0",
     "nodemon": "^2.0.22",
     "pg": "^8.11.1"
-  }
+  },
+  "devDependencies": {}
 }
