@@ -2,6 +2,7 @@ const express = require("express"); // Import the Express.js
 const cors = require("cors"); // Import the CORS middleware
 const morgan = require("morgan"); // Import the Morgan middleware for logging
 const { PORT } = require("./config");
+const authRoutes = require("./routes/auth");
 
 // const userRouter = require("./routes/auth.js");
 
@@ -11,6 +12,7 @@ const app = express();
 
 app.use(cors()); // Enable CORS middleware to handle cross-origin requests
 app.use(morgan("dev")); // Use Morgan middleware with 'dev' format for request logging
+app.use("/auth", authRoutes);
 app.use(express.json()); // Parse incoming requests with JSON payloads
 
 app.use((req, res, next) => {
